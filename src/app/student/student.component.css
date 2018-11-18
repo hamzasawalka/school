@@ -1,0 +1,14 @@
+textarea {
+    height: 200px;
+    width: 400px;
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+
+button {
+    float: right;
+}

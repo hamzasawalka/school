@@ -1,0 +1,11 @@
+<div>
+<input required placeholder="Enter your name" type="text" (input)="name = $event.target.value" />
+<textarea (input)="answer = $event.target.value">Enter your answer...
+</textarea> 
+<button (click)="getAnswer(answer,name)">Submit</button>
+</div>
+
+<div>
+    <p *ngFor="let log of logs">{{ log }}</p>
+</div>
+

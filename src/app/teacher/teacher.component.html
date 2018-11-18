@@ -1,0 +1,19 @@
+
+<div *ngFor="let answer of answers">
+  <div *ngIf="answer.forTeacher" class="div" [ngStyle]="{ 'background-color': answer.bg }">
+    <h3>{{ answer.name }}</h3>
+    <p>{{ answer.answer }}</p>
+    <div>
+      <label for="first">0</label>
+      <input [value]="0" name="first" type="radio" name="mark" (change)="editGrade(answer.name, $event)"  />
+
+      <label for="second">5</label>
+      <input [value]="5" name="second" type="radio" name="mark" (change)="editGrade(answer.name, $event)" />
+
+      <label for="third">10</label>
+      <input [value]="10" name="third" type="radio" name="mark" (change)="editGrade(answer.name, $event)" />
+
+      
+    </div>
+  </div>
+</div>
