@@ -14,7 +14,9 @@ export class SelectionDirective {
 
   public siblings:any[] = [];
   public parent:any = {};
-  public clicked = this.teacherComponent.clicked;
+  
+
+  
   
 
   constructor(private elRef: ElementRef, private renderer: Renderer2,
@@ -32,7 +34,8 @@ export class SelectionDirective {
     } 
     this.renderer.addClass(parent, 'clicked'); 
     
-    console.log( Object.keys(parent)  );
+    
+    console.log(  );
    
   }
 

@@ -5,18 +5,18 @@
     
     
       <div class="buttons">
-        <label> <i class="far fa-grin-squint-tears"></i>
-        <input class='input' select [checked]="parseInt(answer.grade) == 0" [value]="0" type="radio" name="{{answer.name}}"
+        <label [ngStyle]="{'color': clicked(answer.grade == 0)}"> <i class="far fa-grin-squint-tears"></i>
+        <input select [checked]="parseInt(answer.grade) == 0" [value]="0" type="radio" name="{{answer.name}}"
           (change)="editGrade(answer.name, $event)" />
         </label>
     
-        <label> <i class="far fa-grin"></i> 
-        <input class='input' select [checked]="parseInt(answer.grade) == 5" [value]="5" type="radio" name="{{answer.name}}"
+        <label [ngStyle]="{'color': clicked(answer.grade) == 5}"> <i class="far fa-grin"></i> 
+        <input select [checked]="parseInt(answer.grade) == 5" [value]="5" type="radio" name="{{answer.name}}"
           (change)="editGrade(answer.name, $event)" />
         </label>
     
-        <label> <i class="far fa-smile-beam"></i>
-        <input class='input' select [checked]="parseInt(answer.grade) == 10" [value]="10" type="radio" name="{{answer.name}}"
+        <label [ngStyle]="{'color': clicked(answer.grade == 10)}"> <i class="far fa-smile-beam"></i>
+        <input select [checked]="parseInt(answer.grade) == 10" [value]="10" type="radio" name="{{answer.name}}"
           (change)="editGrade(answer.name, $event)" />
         </label>
       </div>

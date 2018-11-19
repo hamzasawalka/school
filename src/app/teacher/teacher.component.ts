@@ -15,7 +15,11 @@ export class TeacherComponent implements OnInit {
   public answers = this.appComponent.answers;
   public bg = "pink";
 
-  public clicked:any[] = [];
+  public clicked(bool) {
+    if(bool) {
+      return 'red';
+    }
+  }
 
   public parseInt(num) {
     return parseInt(num);
