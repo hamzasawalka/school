@@ -11,3 +11,25 @@
 .done {
     background: greenyellow;
 }
+
+[type=radio] { 
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    font-size: 50px;
+  }
+  
+  /* IMAGE STYLES */
+  [type=radio] + i {
+    cursor: pointer;
+    font-size: 50;
+  }
+
+  .fa, .far, .fas {
+      font-size: 50px
+  }
+  
+  .clicked {
+      color: red;
+  }

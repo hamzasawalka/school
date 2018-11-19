@@ -10,10 +10,10 @@ import { AppComponent } from '../app.component';
   providers: [ AppComponent ]
 })
 export class StudentComponent implements OnInit {
-  public logs = this.appComponent.logs;
+  public marks = this.appComponent.answers;
 
   getAnswer(answer, name) {
-    this.appComponent.answers.push({ forTeacher: true, name: name, answer: answer, grade: null, bg: 'pink' }) ;
+    this.appComponent.answers.push({ forTeacher: true, name: name, answer: answer, grade: 99, bg: 'pink' }) ;
     this.appComponent.logs.push("The student submitted an answer.")
   }
 

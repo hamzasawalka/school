@@ -14,6 +14,7 @@ export class AppComponent {
 
   public answers = this.answersService.answerEvents;
   public logs = this.answersService.logs;
+  
 
   constructor(public answersService: AnswersService) { }
 }

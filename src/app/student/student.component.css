@@ -12,3 +12,7 @@ div {
 button {
     float: right;
 }
+
+p {
+    width: 100px;
+}

@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef, Renderer2 } from '@angular/core';
 
 // Custom imports
 import { AppComponent } from '../app.component';
+
 
 
 @Component({
@@ -14,6 +15,12 @@ export class TeacherComponent implements OnInit {
   public answers = this.appComponent.answers;
   public bg = "pink";
 
+  public clicked:any[] = [];
+
+  public parseInt(num) {
+    return parseInt(num);
+  }
+
   public editGrade(name, event) {
     for( var i = 0; i < this.appComponent.answers.length; i++) {
       if(name == this.appComponent.answers[i].name) {
@@ -23,14 +30,20 @@ export class TeacherComponent implements OnInit {
     }
     this.appComponent.logs.push("The teacher marked" + name + "'s answer with: "+ event.target.value);
     
-    
-    console.log(this.appComponent.answers);
   }
 
-  constructor(public appComponent: AppComponent) { }
+  
+
+  
+
+  constructor(public appComponent: AppComponent, private elRef: ElementRef, private renderer: Renderer2) {
+    
+
+   }
 
   ngOnInit() {
-    
+    console.log( this.clicked )
+
   }
 
 }
