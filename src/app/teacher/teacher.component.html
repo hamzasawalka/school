@@ -10,7 +10,7 @@
           (change)="editGrade(answer.name, $event)" />
         </label>
     
-        <label [ngStyle]="{'color': clicked(answer.grade) == 5}"> <i class="far fa-grin"></i> 
+        <label [ngStyle]="{'color': clicked(answer.grade == 5)}"> <i class="far fa-grin"></i> 
         <input select [checked]="parseInt(answer.grade) == 5" [value]="5" type="radio" name="{{answer.name}}"
           (change)="editGrade(answer.name, $event)" />
         </label>
