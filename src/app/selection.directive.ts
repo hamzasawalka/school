@@ -1,26 +1,17 @@
-import { Directive, ElementRef, HostListener, Renderer2, OnInit } from '@angular/core';
+import { Directive, ElementRef, HostListener, Renderer2 } from '@angular/core';
 
-// Custom imports
 
-import { TeacherComponent } from './teacher/teacher.component';
 
 @Directive({
   selector: '[select]',
-  providers: [ 
-    
-    TeacherComponent ]
+  providers: [ ]
 })
 export class SelectionDirective {
 
   public siblings:any[] = [];
   public parent:any = {};
   
-
-  
-  
-
-  constructor(private elRef: ElementRef, private renderer: Renderer2,
-     public teacherComponent: TeacherComponent) { }
+  constructor(private elRef: ElementRef, private renderer: Renderer2) { }
 
   @HostListener('click')
   performTask() {

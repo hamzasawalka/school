@@ -1,4 +1,4 @@
-import { Component, OnInit, ElementRef, Renderer2 } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 // Custom imports
 import { AppComponent } from '../app.component';
@@ -40,14 +40,8 @@ export class TeacherComponent implements OnInit {
 
   
 
-  constructor(public appComponent: AppComponent, private elRef: ElementRef, private renderer: Renderer2) {
-    
+  constructor(public appComponent: AppComponent) { }
 
-   }
-
-  ngOnInit() {
-    console.log( this.clicked )
-
-  }
+  ngOnInit() { }
 
 }

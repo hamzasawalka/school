@@ -13,8 +13,14 @@ export class StudentComponent implements OnInit {
   public marks = this.appComponent.answers;
 
   getAnswer(answer, name) {
+    for(var i = 0; i < this.appComponent.answers.length; i++)
+    {
+      if(name == this.appComponent.answers[i].name) {
+        this.appComponent.answers[i].answer = answer;
+        return;
+      }
+    }
     this.appComponent.answers.push({ forTeacher: true, name: name, answer: answer, grade: 99, bg: 'pink' }) ;
-    this.appComponent.logs.push("The student submitted an answer.")
   }
 
   constructor(public appComponent: AppComponent) { }
